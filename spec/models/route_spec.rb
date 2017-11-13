@@ -7,6 +7,7 @@ RSpec.describe Route, type: :model do
   end
 
   describe 'Associations' do
+    it { should have_many(:offerings) }
     it { should have_many(:stops) }
   end
 end
