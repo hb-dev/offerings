@@ -8,4 +8,8 @@ RSpec.describe Port, type: :model do
     it { should validate_uniqueness_of(:name) }
     it { should validate_uniqueness_of(:code) }
   end
+
+  describe 'Associations' do
+    it { should have_many(:stops) }
+  end
 end
