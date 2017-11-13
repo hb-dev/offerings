@@ -1,0 +1,3 @@
+class Route < ApplicationRecord
+  validates :name, presence: true, uniqueness: true
+end
