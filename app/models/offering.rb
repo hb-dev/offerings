@@ -3,4 +3,5 @@ class Offering < ApplicationRecord
 
   validates :title, :company, :route, :price, presence: true
   validates :title, uniqueness: true
+  validates :price, numericality: true
 end
