@@ -1,0 +1,13 @@
+resources:
+- name: offerings
+  type: git
+  source:
+    uri: https://github.com/hb-dev/offerings
+    branch: master
+
+jobs:
+- name: test-app
+  plan:
+  - get: offerings
+  - task: tests
+    file: offerings/build.yml
