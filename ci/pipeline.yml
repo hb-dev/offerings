@@ -9,5 +9,6 @@ jobs:
 - name: test-app
   plan:
   - get: offerings
+    trigger: true
   - task: tests
     file: offerings/build.yml
